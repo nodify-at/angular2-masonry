@@ -1,5 +1,5 @@
-declare var require: any;
-declare var imagesLoaded: any;
+declare let require: any;
+declare let imagesLoaded: any;
 
 import {
     Component,
@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 
 // import * as masonry from 'masonry-layout';
-var masonry = require('masonry-layout');
+const masonry = require('masonry-layout');
 
 import { MasonryOptions } from './masonry-options';
 

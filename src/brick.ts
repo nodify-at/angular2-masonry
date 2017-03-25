@@ -3,7 +3,7 @@ interface MutationWindow extends Window {
     WebKitMutationObserver: any;
 }
 
-declare var window: MutationWindow;
+declare let window: MutationWindow;
 
 import {
     Directive,
@@ -42,7 +42,7 @@ export class AngularMasonryBrick implements OnDestroy, AfterViewInit {
         if (MutationObserver) {
             /** Watch for any changes to subtree */
             let self = this;
-            let observer = new MutationObserver(function(mutations, observerFromElement) {
+            let observer = new MutationObserver(function(_mutations, _observerFromElement) {
                 self._parent.layout();
             });
 
